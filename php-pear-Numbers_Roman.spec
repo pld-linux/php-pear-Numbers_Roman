@@ -2,15 +2,16 @@
 %define         _class          Numbers
 %define         _subclass       Roman
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - converting to and from Roman numerals
 Summary(pl):	%{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
-Version:	0.1
-Release:	2
+Version:	0.1.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	a00477f4b4e7d6b621bf15de26a048bb
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	f313e65683973a7129ad7006ba932576
 URL:		http://pear.php.net/package/Numbers_Roman/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -25,7 +26,6 @@ Klasa do konwersji z i do cyfr rzymskich.
 
 %prep
 %setup -q -c
-mv -f %{_pearname}-%{version}/package.xml .
 
 %install
 rm -rf $RPM_BUILD_ROOT
