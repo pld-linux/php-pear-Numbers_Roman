@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Numbers
 %define		_subclass	Roman
-%define		_status		stable
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - converting to and from Roman numerals
 Summary(pl):	%{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
-Version:	0.1.1
+Version:	1.0.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	f313e65683973a7129ad7006ba932576
+# Source0-md5:	5103711a2e29d48a5ccda8ba1a11c893
 URL:		http://pear.php.net/package/Numbers_Roman/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
