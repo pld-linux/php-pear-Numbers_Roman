@@ -2,8 +2,8 @@
 %define         _class          Numbers
 %define         _subclass       Roman
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - converting to and from Roman numerals
-Summary(pl):	%{_class}_%{_subclass} - konwersja z i do cyfr rzymskich
+Summary:	%{_pearname} - converting to and from Roman numerals
+Summary(pl):	%{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
 Version:	0.1
 Release:	1
