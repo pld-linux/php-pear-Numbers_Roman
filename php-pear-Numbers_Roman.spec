@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Numbers
-%define         _subclass       Roman
+%define		_class		Numbers
+%define		_subclass	Roman
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - converting to and from Roman numerals
