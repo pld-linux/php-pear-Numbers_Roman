@@ -1,6 +1,7 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Numbers
 %define		_subclass	Roman
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - converting to and from Roman numerals
@@ -21,8 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A class for converting to and from Roman numerals.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Klasa do konwersji z i do cyfr rzymskich.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
