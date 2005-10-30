@@ -8,7 +8,7 @@ Summary:	%{_pearname} - converting to and from Roman numerals
 Summary(pl):	%{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
-Release:	3
+Release:	4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -44,6 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %doc docs/%{_pearname}/docs/*
-%dir %{php_pear_dir}/%{_class}
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
