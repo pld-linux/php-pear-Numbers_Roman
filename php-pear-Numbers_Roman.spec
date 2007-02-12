@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - converting to and from Roman numerals
-Summary(pl):	%{_pearname} - konwersja z i do cyfr rzymskich
+Summary(pl.UTF-8):   %{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	4
@@ -26,7 +26,7 @@ A class for converting to and from Roman numerals.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Klasa do konwersji z i do cyfr rzymskich.
 
 Ta klasa ma w PEAR status: %{_status}.
