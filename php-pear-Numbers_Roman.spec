@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - converting to and from Roman numerals
-Summary(pl.UTF-8):   %{_pearname} - konwersja z i do cyfr rzymskich
+Summary(pl.UTF-8):	%{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	4
