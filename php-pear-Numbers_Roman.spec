@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Numbers
 %define		_subclass	Roman
-%define		_status		beta
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - converting to and from Roman numerals
 Summary(pl.UTF-8):	%{_pearname} - konwersja z i do cyfr rzymskich
 Name:		php-pear-%{_pearname}
-Version:	1.0.1
-Release:	4
+Version:	1.0.2
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	5103711a2e29d48a5ccda8ba1a11c893
+# Source0-md5:	015e9d283ccf698be6a0247c57a96fc6
 URL:		http://pear.php.net/package/Numbers_Roman/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -31,8 +31,26 @@ Klasa do konwersji z i do cyfr rzymskich.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
+Group:		Development/Languages/PHP
+Requires:	%{name} = %{version}-%{release}
+AutoProv:	no
+AutoReq:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl.UTF-8
+Testy dla PEAR::%{_pearname}.
+
 %prep
 %pear_package_setup
+
+# pear/tests/pearname/tests -> pear/tests/pearname
+mv ./%{php_pear_dir}/tests/%{_pearname}/{tests/*,}
+rmdir ./%{php_pear_dir}/tests/%{_pearname}/tests
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -48,3 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
