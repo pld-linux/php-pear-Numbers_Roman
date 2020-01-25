@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		Numbers
 %define		_subclass	Roman
 %define		_status		stable
